@@ -25,7 +25,7 @@
     </h1>
 
     <p class="main-contacts">
-      <a class="telephone-numder" href="tel:+78125550555">+7 (812) 555-05-55</a>
+      <a class="phone-numder" href="tel:+78125550555">+7 (812) 555-05-55</a>
       г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
     </p>
 
@@ -315,7 +315,7 @@
 
     </section>
 
-    <section>
+    <section class="about-company">
       <h2>Компания «Техномарт»</h2>
       <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта
         и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
@@ -323,28 +323,28 @@
         Техномарт работает со многими транспортными компаниями:
       </p>
 
-      <ul>
+      <ul class="delivery-companies">
         <li>Деловые линии</li>
         <li>Автотрейдинг</li>
         <li>ЖелДорЭкспедиция</li>
       </ul>
 
-      <a href="">
+      <a class="red-button" href="">
         Подробнее о компании
       </a>
 
     </section>
 
-    <section>
+    <section class="contacts">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами,
         заехав в наш офис:
       </p>
 
-      <a href="">
+      <a class="map" href="">
         <img src="https://via.placeholder.com/300x158" alt="">
       </a>
-      <a href="">
+      <a class="red-button" href="">
         Заблудились? Напишите нам!
       </a>
 
@@ -353,58 +353,67 @@
   </main>
 
   <footer class="page-footer main-body">
-    <div>
+    <div class="footer-navigation">
       <h2>Повторная навигация</h2>
-      <a href="index.html">
+      <a class="footer-logo" href="index.html">
         <img src="https://via.placeholder.com/220x47" alt="">
       </a>
-      <p>
+      <p class="footer-contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         +7 (812) 555-05-55
       </p>
 
-      <nav>
+      <nav class="repeated-navigation">
         <ul>
-          <li><a href="">Компания</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
-          <li><a href="">Материалы</a></li>
-          <li><a href="">Техника</a></li>
-          <li><a href="">Инструмент</a></li>
-          <li><a href="">Спецпредложения</a></li>
+          <li class="white-nav">
+            <ul>
+              <li><a href="">Компания</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="">Каталог</a></li>
+              <li><a href="">Доставка</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </li>
+
+          <li class="yellow-nav">
+            <ul>
+              <li><a href="">Материалы</a></li>
+              <li><a href="">Техника</a></li>
+              <li><a href="">Инструмент</a></li>
+              <li><a href="">Спецпредложения</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
 
-    <div>
+    <div class="site-info">
       <h2>Дополнительная информация о сайте</h2>
-      <p>
+      <p class="rights">
         © 2010–2019 Компания «Техномарт»
         Все права защищены
       </p>
 
-      <div>
+      <div class="social">
         <ul>
           <li>
-            <a href="">Вконтакте</a>
+            <a class="social-button" href="">Вконтакте</a>
           </li>
           <li>
-            <a href="">Фейсбук</a>
+            <a class="social-button" href="">Фейсбук</a>
           </li>
           <li>
-            <a href="">Инстаграм</a>
+            <a class="social-button" href="">Инстаграм</a>
           </li>
         </ul>
       </div>
 
-      <p>
+      <p class="feedback">
         Обратная связь:
         <a href="">mail@htmlacademy.ru</a>
       </p>
 
-      <p>
+      <p class="developer">
         Разработано:
         <a href="https://htmlacademy.ru">HTML Academy</a>
       </p>
@@ -413,16 +422,16 @@
 
   </footer>
 
-  <section>
+  <section class="modal modal-feedback">
     <h2>Напишите нам</h2>
     <!-- Здесь будет форма обратной связи -->
-    <button type="button">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
-  <section>
+  <section class="modal modal-map">
     <h2>Как до нас добраться</h2>
     <!-- Здесь будет карта -->
-    <button type="button">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
 </body>
