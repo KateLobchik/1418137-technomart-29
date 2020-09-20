@@ -1,0 +1,55 @@
+/* Variables */
+
+:root {
+--basic-black: #000000;
+--basic-white: #FFFFFF;
+--border-item: #EAEAEA;
+--under-img: rgba(0, 0, 0, 0.0001);
+
+--basic-blue: #32425C;
+--background-top-buttom: #293449;
+
+--basic-red: #EE3643;
+
+/*header*/
+--icon-login: #C5C5C5;
+--icon-phone: #B7BFC8;
+--background-phone: #F3F7F9;
+--order: #63A63E;
+
+/*slider*/
+--rectangle-slider: rgba(0, 0, 0, 0.25);
+
+/*items express navigation*/
+--materials: #FFBF47;
+--instruments: #3BBCE3;
+--technics: #DC91D8;
+--discount: #8ED78F;
+--delivery: #FFC047;
+
+/*popular sections*/
+--background-title: #F9F5F0;
+--old-prise: #A9A9A9;
+
+/*services*/
+--background-services: #F1F5F7;
+--order-credit: #FF5357;
+
+/*footer*/
+/*white-nav: #F1F5F7;  Этот цвет уже есть выше, но не знаю как логически соединить в одно название */
+--yellow-text: #FFD180;
+--yellow-technics: #FFDA96;  /*В макете почему то только "Техника" отличается.. это на вниматерьность или просто ошибка? :)*/
+--sosial-icon: #212A3A;
+--contacts: #F3F7F9;
+
+/*popap*/
+/*border-forms: #C5C5C5;*/
+--text-forms: #A9A9A9;
+--rectangle-forms: #F4F4F4;
+
+
+
+
+
+
+}
