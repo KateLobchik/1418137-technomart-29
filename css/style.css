@@ -1,55 +1,508 @@
-/* Variables */
+/* Variables (пояснения для строчки кода снизу)*/
 
 :root {
---basic-black: #000000;
---basic-white: #FFFFFF;
---border-item: #EAEAEA;
---under-img: rgba(0, 0, 0, 0.0001);
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --white-half: rgba(255, 255, 255, 0.5);
+  --white-third: rgba(255, 255, 255, 0.3);
+  --white-grey: #F1F5F7;
+  /*фон "Сервисы", 1-ая строка в повтор.nav */
+  --white-grey-half: rgba(241, 245, 247, 0.5);
+  --contacts-grey: #F3F7F9;
+  /*фон под номноли телефона, цвет контактов в footer*/
+  --basic-lightgrey: #C5C5C5;
+  /*иконка входа, border у форм, наведение на кнопку в express nav*/
+  --basic-lightgrye-third: rgba(197, 197, 197, 0.3);
+  --lightgrey-other: #a9a9a9;
+  /*при клике в express nav, старая цена, текст в формах*/
+  --lightgrey-other-third: rgba(169, 169, 169, 0.3);
+  --basic-grey: #3D546F;
+  --under-img: rgba(0, 0, 0, 0.0001);
+  --basic-blue: #32425C;
+  --basic-darkblue: #293449;
+  /*фон меню и 2-го фетера, наведение в меню, наведение "Сервисы"*/
+  --basic-red: #EE3643;
+  --red-hover: #CA2C37;
+  --error: #BA2732;
+  --basic-green: #63A63E;
+  --green-hover: #5FBB2D;
+  --green-click: #518534;
+  /*header*/
+  --icon-phone: #B7BFC8;
+  --nav-click: #1D2739;
+  --menu-click: #161D29;
+  /*slider*/
+  --rectangle-slider: rgba(0, 0, 0, 0.25);
+  /*items express navigation*/
+  --materials: #FFBF47;
+  --instruments: #3BBCE3;
+  --technics: #DC91D8;
+  --discount: #8ED78F;
+  --delivery: #FFC047;
+  /*popular sections*/
+  --background-popular: #F9F5F0;
+  --border-item: #EAEAEA;
+  /*services*/
+  --order-credit: #FF5357;
+  /*footer*/
+  --yellow-text: #FFD180;
+  --yellow-text-half: rgba(255, 209, 128, 0.5);
+  --yellow-technics: #FFDA96;
+  /*В макете почему то только "Техника" отличается.. это на вниматерьность или просто ошибка? :)*/
+  --sosial-icon: #212A3A;
+  /*popap*/
+  --rectangle-forms: #F4F4F4;
+  /*Fonts*/
+  --main-fonts: "Cuprum", Arial, sans-serif;
+  --descriptional-fonts: "PT Sans", Arial, sans-serif;
+}
 
---basic-blue: #32425C;
---background-top-buttom: #293449;
+/*Global*/
 
---basic-red: #EE3643;
+.page-body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-fonts);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
 
-/*header*/
---icon-login: #C5C5C5;
---icon-phone: #B7BFC8;
---background-phone: #F3F7F9;
---order: #63A63E;
+/*Header*/
 
-/*slider*/
---rectangle-slider: rgba(0, 0, 0, 0.25);
+.main-header {
+  background-image: url();
+  /*По макету, фон - это img, не получилось подключить*/
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: var(--contacts-grey);
+  /*Временно*/
+}
 
-/*items express navigation*/
---materials: #FFBF47;
---instruments: #3BBCE3;
---technics: #DC91D8;
---discount: #8ED78F;
---delivery: #FFC047;
+.main-menu {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--basic-darkblue);
+}
 
-/*popular sections*/
---background-title: #F9F5F0;
---old-prise: #A9A9A9;
+.main-menu a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
 
-/*services*/
---background-services: #F1F5F7;
---order-credit: #FF5357;
+.order {
+  background-color: var(--basic-green);
+}
 
-/*footer*/
-/*white-nav: #F1F5F7;  Этот цвет уже есть выше, но не знаю как логически соединить в одно название */
---yellow-text: #FFD180;
---yellow-technics: #FFDA96;  /*В макете почему то только "Техника" отличается.. это на вниматерьность или просто ошибка? :)*/
---sosial-icon: #212A3A;
---contacts: #F3F7F9;
+.order:hover, .order:focus {
+  background-color: var(--green-hover);
+}
 
-/*popap*/
-/*border-forms: #C5C5C5;*/
---text-forms: #A9A9A9;
---rectangle-forms: #F4F4F4;
+/*.main-menu a:hover,
+ .main-menu a:focus {
+ }*/
 
+.main-menu a:active {
+  color: var(--white-click);
+}
 
+.header-title {
+  font-family: var(--main-fonts);
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
 
+.main-contacts {
+  color: var(--basic-blue);
+}
 
+.main-contacts a {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  text-decoration: none;
+}
 
+.phone-number {
+  border-color: var(--basic-white);
+}
 
+.user-account a {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  text-decoration: none;
+  background-color: var(--basic-white);
+  /*По макету другой цвет, поэтому это временно, для наглядности*/
+}
+
+.user-account a:hover, .user-account a:focus {
+  color: var(--basic-red);
+}
+
+.user-account a:active {
+  color: var(--basic-lightgrey);
+}
+
+.main-navigation {
+  background-color: var(--basic-blue);
+}
+
+.main-navigation ul {
+  list-style: none;
+}
+
+.main-navigation a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+.main-navigation li:hover, .main-navigation li:focus {
+  background-color: var(--basic-darkblue);
+}
+
+.main-navigation a:active, .main-navigation li:active {
+  color: var(--white-click);
+  background-color: var(--nav-click);
+}
+
+.slider {
+  color: var(--basic-white);
+}
+
+.rectangle {
+  width: 620px;
+  height: 104px;
+  background-color: var(--rectangle-slider);
+}
+
+.rectangle h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.rectangle p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.red-button {
+  color: var(--basic-white);
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+
+.red-button:hover, .red-button:focus {
+  background-color: var(--red-hover);
+}
+
+.red-button:active {
+  background-color: var(--error);
+}
+
+.item-express {
+  width: 300px;
+  height: 123px;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.item-express h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.button {
+  color: var(--basic-white);
+  text-decoration: none;
+  background-color: var(--white-third);
+  text-transform: uppercase;
+}
+
+.button:hover, .button:focus {
+  background-color: var(--basic-lightgrye-third);
+}
+
+.button:active {
+  background-color: var(--lightgrey-other-third);
+}
+
+.materials {
+  background-color: var(--materials);
+}
+
+.instruments {
+  background-color: var(--instruments);
+}
+
+.technics {
+  background-color: var(--technics);
+}
+
+.discount-50 {
+  background-color: var(--discount);
+}
+
+.delivery {
+  background-color: var(--delivery);
+}
+
+.popular-headline {
+  width: 940px;
+  height: 89px;
+  background-color: var(--background-popular);
+}
+
+.popular-headline h2 {
+  color: var(--basic-blue);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.popular-products-list {
+  list-style: none;
+}
+
+.catalog-item {
+  width: 220px;
+  height: 318px;
+  font-family: var(--descriptional-fonts);
+  border: 1px solid var(--border-item);
+}
+
+.catalog-item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.item-name {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.catalog-item p {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.old-price {
+  color: var(--lightgrey-other);
+  text-decoration-line: line-through;
+}
+
+.new-price {
+  background-color: var(--basic-red);
+}
+
+.user-choice {
+  font-family: var(--main-fonts);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.user-choice a {
+  text-decoration: none;
+}
+
+.button-buy {
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+}
+
+.button-buy:hover, .button-buy:focus {
+  background-color: var(--green-hover);
+}
+
+.button-buy:active {
+  background-color: var(--green-click);
+}
+
+.button-favorites {
+  color: var(--basic-blue);
+  border: 3px solid var(--basic-green);
+}
+
+.button-favorites:hover, .button-favorites:focus {
+  border: 3px solid var(--basic-blue);
+}
+
+.button-favorites:active {
+  color: rgba(50, 66, 92, 0.5);
+  border: 3px solid rgba(50, 66, 92, 0.5);
+  /*По макету тоже не понятно какой цвет..*/
+}
+
+.popular-brand-list {
+  list-style: none;
+}
+
+.services {
+  background-color: var(--white-grey);
+}
+
+.services p, .about-company p, .contacts p {
+  font-family: var(--descriptional-fonts);
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.services h2, .services h3, .about-company h2, .contacts h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services h3 {
+  color: var(--basic-blue);
+}
+
+.name-service {
+  list-style: none;
+}
+
+.button-service {
+  width: 240px;
+  height: 61px;
+  color: var(--basic-white);
+  font-family: var(--main-fonts);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: var(--basic-blue);
+}
+
+.button-service:focus {
+  color: var(--basic-blue);
+  background-color: var(--basic-white);
+}
+
+.credit-button {
+  color: var(--basic-white);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--order-credit);
+}
+
+.delivery-companies {
+  font-family: var(--main-fonts);
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+}
+
+/*Footer*/
+
+.page-footer {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.footer-navigation {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-navigation p {
+  color: var(--contacts-grey);
+}
+
+.repeated-navigation ul {
+  list-style: none;
+}
+
+.repeated-navigation a {
+  text-decoration: none;
+}
+
+.white-nav a {
+  color: var(--white-grey);
+}
+
+.white-nav a:hover, .white-nav a:focus {
+  text-decoration: underline;
+}
+
+.white-nav a:active {
+  color: var(--white-grey-half)
+}
+
+.yellow-nav a {
+  color: var(--yellow-text);
+  list-style: none;
+}
+
+.yellow-nav a:hover, .yellow-nav a:focus {
+  text-decoration: underline;
+}
+
+.yellow-nav a:active {
+  color: var(--yellow-text-half);
+}
+
+.site-info {
+  background-color: var(--basic-darkblue);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: var(--basic-white);
+  text-decoration: none;
+  background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+
+.social-button:hover, .social-button:focus {
+  background: var(--basic-red);
+}
+
+.social-button:active {
+  background: var(--basic-red);
+}
+
+.feedback a, .developer a {
+  text-decoration: none;
+  color: var(--yellow-text);
+}
+
+.feedback a:hover, .developer a:hover, .feedback a:focus, .developer a:focus {
+  text-decoration: underline;
+}
+
+.feedback a:active, .developer a:active {
+  color: var(--yellow-text-half);
 }
