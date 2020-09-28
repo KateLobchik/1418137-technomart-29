@@ -1,280 +1,286 @@
-/* Variables (пояснения для строчки кода снизу)*/
-
 :root {
-  --basic-black: #000000;
-  --basic-white: #FFFFFF;
-  --white-half: rgba(255, 255, 255, 0.5);
-  --white-third: rgba(255, 255, 255, 0.3);
-  --white-grey: #F1F5F7;
-  /*фон "Сервисы", 1-ая строка в повтор.nav */
-  --white-grey-half: rgba(241, 245, 247, 0.5);
-  --contacts-grey: #F3F7F9;
-  /*фон под номноли телефона, цвет контактов в footer*/
-  --basic-lightgrey: #C5C5C5;
-  /*иконка входа, border у форм, наведение на кнопку в express nav*/
-  --basic-lightgrye-third: rgba(197, 197, 197, 0.3);
-  --lightgrey-other: #a9a9a9;
-  /*при клике в express nav, старая цена, текст в формах*/
-  --lightgrey-other-third: rgba(169, 169, 169, 0.3);
-  --basic-grey: #3D546F;
-  --under-img: rgba(0, 0, 0, 0.0001);
-  --basic-blue: #32425C;
-  --basic-darkblue: #293449;
-  /*фон меню и 2-го фетера, наведение в меню, наведение "Сервисы"*/
-  --basic-red: #EE3643;
-  --red-hover: #CA2C37;
+  /*ПАЛИТРА*/
+  --black: #000000;
+  --white: #FFFFFF;
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --gray-white: #F1F5F7;
+  --gray-white-50: rgba(241, 245, 247, 0.5);
+  --lightest-gray: #F3F7F9;
+  --light-gray: #C5C5C5;
+  --light-gray-30: rgba(197, 197, 197, 0.3);
+  --light-gray-other: #a9a9a9;
+  --light-gray-other-30: rgba(169, 169, 169, 0.3);
+  --gray: #3D546F;
+  --blue: #32425C;
+  --dark-blue: #293449;
+  --red: #EE3643;
+  --dark-red: #CA2C37;
   --error: #BA2732;
-  --basic-green: #63A63E;
-  --green-hover: #5FBB2D;
-  --green-click: #518534;
+  --green: #63A63E;
+  --light-green: #5FBB2D;
+  --dark-green: #518534;
+  --yellow: #FFD180;
+  --yellow-50: rgba(255, 209, 128, 0.5);
+  /*ФУНКЦИОНАЛЬНЫЕ ЦВЕТА*/
   /*header*/
-  --icon-phone: #B7BFC8;
-  --nav-click: #1D2739;
+  --header-background: var(--lightest-gray);
+  --menu-background: var(--dark-blue);
   --menu-click: #161D29;
+  --main-nav-background: var(--blue);
+  --main-nav-hover: var(--dark-blue);
+  --main-nav-click: #1D2739;
+  --icon-phone: #B7BFC8;
   /*slider*/
-  --rectangle-slider: rgba(0, 0, 0, 0.25);
+  --slider-background: rgba(0, 0, 0, 0.25);
   /*items express navigation*/
-  --materials: #FFBF47;
-  --instruments: #3BBCE3;
-  --technics: #DC91D8;
-  --discount: #8ED78F;
-  --delivery: #FFC047;
+  --express-background-materials: #FFBF47;
+  --express-background-instruments: #3BBCE3;
+  --express-background-technics: #DC91D8;
+  --express-background-discount: #8ED78F;
+  --express-background-delivery: #FFC047;
+  --express-button: var(--white-30);
+  --express-button-hover: var(--light-gray-30);
+  --express-button-click: var(--light-gray-other-30);
   /*popular sections*/
-  --background-popular: #F9F5F0;
-  --border-item: #EAEAEA;
+  --popular-background: #F9F5F0;
+  --item-old-price: var(--light-gray-other);
+  --item-border: #EAEAEA;
   /*services*/
-  --order-credit: #FF5357;
+  --services-background: var(--gray-white);
+  --services-button: var(--blue);
+  --services-button-hover: var(--dark-blue);
+  --services-button-credit: #FF5357;
   /*footer*/
-  --yellow-text: #FFD180;
-  --yellow-text-half: rgba(255, 209, 128, 0.5);
-  --yellow-technics: #FFDA96;
-  /*В макете почему то только "Техника" отличается.. это на вниматерьность или просто ошибка? :)*/
-  --sosial-icon: #212A3A;
+  --footer-nav-background: var(--blue);
+  --footer-info-background: var(--dark-blue);
+  --footer-text: var(--gray-white);
+  --footer-text-click: var(--gray-white-50);
+  --footer-color-text: var(--yellow);
+  --footer-color-text-click: var(--yellow-50);
+  --icon-social: #212A3A;
   /*popap*/
-  --rectangle-forms: #F4F4F4;
+  --popap-contacts-text: var(--light-gray-other);
+  --popap-contacts-border: var(--light-gray);
+  --popap-contacts-background: #F4F4F4;
+  --popap-basket-background: #F1F1F1;
   /*Fonts*/
   --main-fonts: "Cuprum", Arial, sans-serif;
   --descriptional-fonts: "PT Sans", Arial, sans-serif;
+  --font-body: 18px;
+  --font-title: 30px;
+  --font-descriptional: 13px;
+  --font-button: 14px;
 }
 
 /*Global*/
 
 .page-body {
   min-width: 940px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: var(--main-fonts);
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--font-body);
   line-height: 24px;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
+  color: var(--black);
+  background-color: var(--white);
 }
 
 /*Header*/
 
 .main-header {
-  background-image: url();
-  /*По макету, фон - это img, не получилось подключить*/
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-color: var(--contacts-grey);
+  background-color: var(--lightest-gray);
   /*Временно*/
 }
 
 .main-menu {
-  font-size: 18px;
-  line-height: 24px;
   color: var(--basic-white);
-  background-color: var(--basic-darkblue);
+  background-color: var(--dark-blue);
 }
 
-.main-menu a {
-  color: var(--basic-white);
+.menu-button {
+  color: var(--white);
   text-decoration: none;
 }
 
+.favorites:active {
+  color: var(--white-50);
+  background-color: var(--menu-click);
+}
+
+.basket:active {
+  color: var(--white-50);
+  background-color: var(--menu-click);
+}
+
 .order {
-  background-color: var(--basic-green);
+  background-color: var(--green);
 }
 
 .order:hover, .order:focus {
-  background-color: var(--green-hover);
+  background-color: var(--light-green);
 }
 
-/*.main-menu a:hover,
- .main-menu a:focus {
- }*/
-
-.main-menu a:active {
-  color: var(--white-click);
+.order:active {
+  color: var(--white-50);
 }
 
 .header-title {
-  font-family: var(--main-fonts);
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
   line-height: 23px;
-  color: var(--basic-red);
+  color: var(--red);
 }
 
 .main-contacts {
-  color: var(--basic-blue);
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--blue);
 }
 
-.main-contacts a {
+.phone-numder {
+  text-decoration: none;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
-  color: var(--basic-red);
+  color: var(--red);
+}
+
+.user-account-button {
   text-decoration: none;
-}
-
-.phone-number {
-  border-color: var(--basic-white);
-}
-
-.user-account a {
   font-size: 21px;
   line-height: 21px;
-  color: var(--basic-black);
-  text-decoration: none;
-  background-color: var(--basic-white);
-  /*По макету другой цвет, поэтому это временно, для наглядности*/
+  color: var(--black);
+  background-color: var(--white);
 }
 
-.user-account a:hover, .user-account a:focus {
-  color: var(--basic-red);
+.login-link:hover, .login-link:focus {
+  color: var(--red);
 }
 
-.user-account a:active {
-  color: var(--basic-lightgrey);
+.login-link:active {
+  color: var(--light-gray);
+}
+
+.registration:hover, .registration:focus {
+  color: var(--red);
+}
+
+.registration:active {
+  color: var(--light-gray);
 }
 
 .main-navigation {
-  background-color: var(--basic-blue);
+  background-color: var(--main-nav-background);
 }
 
 .main-navigation ul {
   list-style: none;
 }
 
-.main-navigation a {
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--basic-white);
+.navigation-button {
   text-decoration: none;
+  color: var(--white);
 }
 
-.main-navigation li:hover, .main-navigation li:focus {
-  background-color: var(--basic-darkblue);
+.navigation-button:hover, .navigation-button:focus {
+  background-color: var(--main-nav-hover);
 }
 
-.main-navigation a:active, .main-navigation li:active {
-  color: var(--white-click);
-  background-color: var(--nav-click);
+.navigation-button:active {
+  color: var(--white-50);
+  background-color: var(--main-nav-click);
 }
+
+/*MAIN*/
 
 .slider {
-  color: var(--basic-white);
+  color: var(--white);
 }
 
 .rectangle {
-  width: 620px;
-  height: 104px;
-  background-color: var(--rectangle-slider);
+  background-color: var(--slider-background);
 }
 
-.rectangle h3 {
+.slider-title {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
 }
 
-.rectangle p {
-  font-size: 18px;
-  line-height: 24px;
-}
-
 .red-button {
-  color: var(--basic-white);
-  font-size: 18px;
-  line-height: 24px;
   text-decoration: none;
+  font-size: var(--font-button);
+  line-height: 18px;
   text-transform: uppercase;
-  background-color: var(--basic-red);
+  color: var(--white);
+  background-color: var(--red);
 }
 
 .red-button:hover, .red-button:focus {
-  background-color: var(--red-hover);
+  background-color: var(--dark-red);
 }
 
 .red-button:active {
   background-color: var(--error);
 }
 
-.item-express {
-  width: 300px;
-  height: 123px;
-  color: var(--basic-white);
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.item-express h3 {
+.item-express-title {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  color: var(--white);
 }
 
-.button {
-  color: var(--basic-white);
+.item-express-button {
   text-decoration: none;
-  background-color: var(--white-third);
+  font-size: var(--font-button);
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--express-button);
   text-transform: uppercase;
 }
 
-.button:hover, .button:focus {
-  background-color: var(--basic-lightgrye-third);
+.item-express-button:hover, .item-express-button:focus {
+  background-color: var(--express-button-hover);
 }
 
-.button:active {
-  background-color: var(--lightgrey-other-third);
+.item-express-button:active {
+  background-color: var(--express-button-click);
 }
 
 .materials {
-  background-color: var(--materials);
+  background-color: var(--express-background-materials);
 }
 
 .instruments {
-  background-color: var(--instruments);
+  background-color: var(--express-background-instruments);
 }
 
 .technics {
-  background-color: var(--technics);
+  background-color: var(--express-background-technics);
 }
 
 .discount-50 {
-  background-color: var(--discount);
+  background-color: var(--express-background-discount);
 }
 
 .delivery {
-  background-color: var(--delivery);
+  background-color: var(--express-background-delivery);
 }
 
 .popular-headline {
-  width: 940px;
-  height: 89px;
-  background-color: var(--background-popular);
+  background-color: var(--popular-background);
 }
 
-.popular-headline h2 {
-  color: var(--basic-blue);
+.popular-headline-title {
+  color: var(--blue);
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: var(--font-title);
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -284,24 +290,19 @@
 }
 
 .catalog-item {
-  width: 220px;
-  height: 318px;
   font-family: var(--descriptional-fonts);
-  border: 1px solid var(--border-item);
-}
-
-.catalog-item h3 {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
+  border: 1px solid var(--item-border);
 }
 
 .item-name {
-  color: var(--basic-black);
   text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+  font-size: var(--font-body);
+  line-height: 20px;
 }
 
-.catalog-item p {
+.price {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -309,48 +310,49 @@
 }
 
 .old-price {
-  color: var(--lightgrey-other);
+  color: var(--item-old-price);
   text-decoration-line: line-through;
 }
 
 .new-price {
-  background-color: var(--basic-red);
+  color: var(--white);
+  background-color: var(--red);
 }
 
 .user-choice {
   font-family: var(--main-fonts);
-  font-size: 14px;
+  font-size: var(--font-button);
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.user-choice a {
+.user-choice-button {
   text-decoration: none;
 }
 
-.button-buy {
-  color: var(--basic-white);
-  background-color: var(--basic-green);
+.buy-button {
+  color: var(--white);
+  background-color: var(--green);
 }
 
-.button-buy:hover, .button-buy:focus {
-  background-color: var(--green-hover);
+.buy-button:hover, .buy-button:focus {
+  background-color: var(--light-green);
 }
 
-.button-buy:active {
-  background-color: var(--green-click);
+.buy-button:active {
+  background-color: var(--dark-green);
 }
 
-.button-favorites {
-  color: var(--basic-blue);
-  border: 3px solid var(--basic-green);
+.favorites-button {
+  color: var(--blue);
+  border: 3px solid var(--green);
 }
 
-.button-favorites:hover, .button-favorites:focus {
-  border: 3px solid var(--basic-blue);
+.favorites-button:hover, .favorites-button:focus {
+  border: 3px solid var(--blue);
 }
 
-.button-favorites:active {
+.favorites-button:active {
   color: rgba(50, 66, 92, 0.5);
   border: 3px solid rgba(50, 66, 92, 0.5);
   /*По макету тоже не понятно какой цвет..*/
@@ -361,148 +363,138 @@
 }
 
 .services {
-  background-color: var(--white-grey);
+  background-color: var(--services-background);
 }
 
-.services p, .about-company p, .contacts p {
-  font-family: var(--descriptional-fonts);
-  font-size: 13px;
-  line-height: 24px;
-  color: var(--basic-black);
-}
-
-.services h2, .services h3, .about-company h2, .contacts h2 {
+.section-title {
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: var(--font-title);
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.services h3 {
-  color: var(--basic-blue);
+.one-service-name {
+  color: var(--blue);
 }
 
-.name-service {
+.text-description {
+  font-family: var(--descriptional-fonts);
+  font-size: var(--font-descriptional);
+  line-height: 24px;
+}
+
+.service-name {
   list-style: none;
 }
 
-.button-service {
-  width: 240px;
-  height: 61px;
-  color: var(--basic-white);
+.service-button {
+  color: var(--white);
   font-family: var(--main-fonts);
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
-  background-color: var(--basic-blue);
+  background-color: var(--services-button);
 }
 
-.button-service:focus {
-  color: var(--basic-blue);
-  background-color: var(--basic-white);
+.service-button:focus {
+  color: var(--services-button-hover);
+  background-color: var(--white);
 }
 
 .credit-button {
-  color: var(--basic-white);
+  text-decoration: none;
+  color: var(--white);
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: var(--font-button);
   line-height: 18px;
   text-transform: uppercase;
-  text-decoration: none;
-  background-color: var(--order-credit);
+  background-color: var(--services-button-credit);
 }
 
 .delivery-companies {
-  font-family: var(--main-fonts);
-  font-size: 18px;
-  line-height: 24px;
   list-style: none;
 }
 
 /*Footer*/
 
 .page-footer {
-  color: var(--basic-white);
-  background-color: var(--basic-blue);
+  color: var(--white);
+  background-color: var(--footer-nav-background);
 }
 
-.footer-navigation {
-  font-size: 18px;
-  line-height: 24px;
+.footer-contacts {
+  color: var(--footer-text);
 }
 
-.footer-navigation p {
-  color: var(--contacts-grey);
-}
-
-.repeated-navigation ul {
+.repeated-navigation-list {
   list-style: none;
 }
 
-.repeated-navigation a {
+.nav-link {
   text-decoration: none;
 }
 
-.white-nav a {
-  color: var(--white-grey);
+.white-nav-link {
+  color: var(--footer-text);
 }
 
-.white-nav a:hover, .white-nav a:focus {
+.white-nav-link:hover, .white-nav-link:focus {
   text-decoration: underline;
 }
 
-.white-nav a:active {
-  color: var(--white-grey-half)
+.white-nav-link:active {
+  color: var(--footer-text-click)
 }
 
-.yellow-nav a {
-  color: var(--yellow-text);
+.yellow-nav-link {
+  color: var(--footer-color-text);
   list-style: none;
 }
 
-.yellow-nav a:hover, .yellow-nav a:focus {
+.yellow-nav-link:hover, .yellow-nav-link:focus {
   text-decoration: underline;
 }
 
-.yellow-nav a:active {
-  color: var(--yellow-text-half);
+.yellow-nav-link:active {
+  color: var(--footer-color-text-click);
 }
 
 .site-info {
-  background-color: var(--basic-darkblue);
+  color: var(--white);
   font-size: 16px;
   line-height: 18px;
+  background-color: var(--footer-info-background);
 }
 
-.social ul {
+.social-icons {
   list-style: none;
 }
 
 .social-button {
-  color: var(--basic-white);
+  color: var(--white);
   text-decoration: none;
   background: linear-gradient(0deg, #212A3A, #212A3A);
 }
 
 .social-button:hover, .social-button:focus {
-  background: var(--basic-red);
+  background: var(--red);
 }
 
 .social-button:active {
-  background: var(--basic-red);
+  background: var(--red);
 }
 
-.feedback a, .developer a {
+.html-academy {
   text-decoration: none;
-  color: var(--yellow-text);
+  color: var(--footer-color-text);
 }
 
-.feedback a:hover, .developer a:hover, .feedback a:focus, .developer a:focus {
+.html-academy:hover, .html-academy:focus {
   text-decoration: underline;
 }
 
-.feedback a:active, .developer a:active {
-  color: var(--yellow-text-half);
+.html-academy:active {
+  color: var(--red);
 }
