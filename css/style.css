@@ -63,7 +63,12 @@
   --popap-contacts-text: var(--light-gray-other);
   --popap-contacts-border: var(--light-gray);
   --popap-contacts-background: #F4F4F4;
-  --popap-basket-background: #F1F1F1;
+  --modal-backet-background: #F1F1F1;
+  /*catalog*/
+  --background-catalog-title: #F2F6F8;
+  --background-filter: #F7F3EC;
+  --border-number-page: #E5E5E5;
+  --about-perforators-background: var(--gray-white);
   /*Fonts*/
   --main-fonts: "Cuprum", Arial, sans-serif;
   --descriptional-fonts: "PT Sans", Arial, sans-serif;
@@ -173,11 +178,56 @@
   color: var(--light-gray);
 }
 
+.user-name {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.user-name:active {
+  color: var(--light-gray);
+}
+
+.log-out {
+  color: var(--light-gray);
+  text-decoration: none;
+}
+
+.log-out:hover, .log-out:focus {
+  color: var(--gray);
+}
+
+.log-out:active {
+  color: var(--light-gray);
+}
+
+.user-account-menu {
+  color: var(--blue);
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.my-oders:hover, .my-oders:focus {
+  color: var(--red);
+}
+
+.my-oders:active {
+  color: var(--light-gray);
+}
+
+.all-account:hover, .all-account:focus {
+  color: var(--red);
+}
+
+.all-account:active {
+  color: var(--light-gray);
+}
+
 .main-navigation {
   background-color: var(--main-nav-background);
 }
 
-.main-navigation ul {
+.main-navigation-list {
   list-style: none;
 }
 
@@ -497,4 +547,82 @@
 
 .html-academy:active {
   color: var(--red);
+}
+
+/*CATALOG*/
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumb {
+  font-family: var(--descriptional-fonts);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-descriptional);
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.catalog-main-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-title);
+  line-height: 30px;
+  color: var(--blue);
+  text-transform: uppercase;
+  background-color: var(--background-catalog-title);
+}
+
+.filter-name {
+  font-family: var(--descriptional-fonts);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-descriptional);
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--background-filter);
+}
+
+.list-pages {
+  list-style: none;
+}
+
+.number-page {
+  font-family: var(--descriptional-fonts);
+  font-size: var(--font-descriptional);
+  line-height: 18px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.number-page-current {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.about-perforators {
+  background-color: var(--about-perforators-background);
+}
+
+/*MODAL*/
+
+.modal-bascket-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.modal-backet-background {
+  background-color: var(--modal-backet-background);
+}
+
+.button-continue {
+  font-family: var(--main-fonts);
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: var(--white);
+  border: none;
 }
