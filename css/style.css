@@ -80,10 +80,18 @@
 
 /*Global*/
 
+.page {
+  height: 100%;
+}
+
 .page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   min-width: 940px;
+  min-height: 100%;
   margin: 0 auto;
   padding: 0;
+  align-content: start;
   font-family: var(--main-fonts);
   font-style: normal;
   font-weight: normal;
@@ -97,17 +105,32 @@
 
 .main-header {
   background-color: var(--lightest-gray);
-  /*Временно*/
 }
 
 .main-menu {
-  color: var(--basic-white);
+  height: 42px;
   background-color: var(--dark-blue);
 }
 
+.main-menu-container {
+  display: grid;
+  grid-template-columns: 220px 1fr 150px 150px 150px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-logo {
+  width: 220px;
+  height: 42px;
+  text-align: center;
+  background-color: var(--red);
+}
+
 .menu-button {
-  color: var(--white);
   text-decoration: none;
+  text-align: center;
+  color: var(--white);
 }
 
 .favorites:active {
@@ -132,6 +155,14 @@
   color: var(--white-50);
 }
 
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .header-title {
   font-style: italic;
   font-weight: normal;
@@ -152,6 +183,10 @@
   font-size: 21px;
   line-height: 30px;
   color: var(--red);
+}
+
+.user-account {
+  text-align: right;
 }
 
 .user-account-button {
@@ -188,8 +223,8 @@
 }
 
 .log-out {
-  color: var(--light-gray);
   text-decoration: none;
+  color: var(--light-gray);
 }
 
 .log-out:hover, .log-out:focus {
@@ -201,10 +236,10 @@
 }
 
 .user-account-menu {
-  color: var(--blue);
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
+  color: var(--blue);
 }
 
 .my-oders:hover, .my-oders:focus {
@@ -224,10 +259,15 @@
 }
 
 .main-navigation {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-bottom: 60px;
   background-color: var(--main-nav-background);
 }
 
 .main-navigation-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -247,8 +287,35 @@
 
 /*MAIN*/
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.express-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 59px 0;
+}
+
+.express-navigation-title {
+  display: none;
+}
+
 .slider {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  width: 620px;
+  height: 266px;
   color: var(--white);
+  /*Для видимости.. и у меня не получилось поднять на серой подложке div, чтобы уже норсвльно слайдер смотрелся.. :(*/
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
 }
 
 .rectangle {
@@ -262,6 +329,9 @@
 }
 
 .red-button {
+  width: 192px;
+  height: 38px;
+  text-align: center;
   text-decoration: none;
   font-size: var(--font-button);
   line-height: 18px;
@@ -278,6 +348,12 @@
   background-color: var(--error);
 }
 
+/*Спрятала слайд с дрелью*/
+
+.slide-drills {
+  display: none;
+}
+
 .item-express-title {
   font-weight: bold;
   font-size: 24px;
@@ -286,12 +362,12 @@
 }
 
 .item-express-button {
-  text-decoration: none;
   font-size: var(--font-button);
   line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
   color: var(--white);
   background-color: var(--express-button);
-  text-transform: uppercase;
 }
 
 .item-express-button:hover, .item-express-button:focus {
@@ -323,33 +399,50 @@
 }
 
 .popular-headline {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  height: 89px;
   background-color: var(--popular-background);
 }
 
 .popular-headline-title {
-  color: var(--blue);
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-title);
   line-height: 30px;
   text-transform: uppercase;
+  color: var(--blue);
+}
+
+.popular-products {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  margin-bottom: 70px;
 }
 
 .popular-products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .catalog-item {
+  width: 220px;
+  height: 318px;
   font-family: var(--descriptional-fonts);
   border: 1px solid var(--item-border);
 }
 
 .item-name {
-  text-decoration: none;
-  color: var(--black);
   font-weight: bold;
   font-size: var(--font-body);
   line-height: 20px;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .price {
@@ -360,8 +453,8 @@
 }
 
 .old-price {
-  color: var(--item-old-price);
   text-decoration-line: line-through;
+  color: var(--item-old-price);
 }
 
 .new-price {
@@ -408,12 +501,44 @@
   /*По макету тоже не понятно какой цвет..*/
 }
 
+.popular-brands {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  margin-bottom: 70px;
+}
+
 .popular-brand-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.popular-brand-name {
+  width: 220px;
+  height: 145px;
+  border: 1px solid var(--item-border);
 }
 
 .services {
   background-color: var(--services-background);
+}
+
+.services-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding-top: 64px;
+  padding-bottom: 99px;
+}
+
+.description-service-guarantee, .description-service-credit {
+  display: none;
 }
 
 .section-title {
@@ -422,6 +547,11 @@
   font-size: var(--font-title);
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.services-slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .one-service-name {
@@ -435,15 +565,17 @@
 }
 
 .service-name {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .service-button {
-  color: var(--white);
   font-family: var(--main-fonts);
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
+  color: var(--white);
   background-color: var(--services-button);
 }
 
@@ -453,14 +585,20 @@
 }
 
 .credit-button {
-  text-decoration: none;
-  color: var(--white);
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-button);
   line-height: 18px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
   background-color: var(--services-button-credit);
+}
+
+.about-tehnomart {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  margin-bottom: 70px;
 }
 
 .delivery-companies {
@@ -474,11 +612,36 @@
   background-color: var(--footer-nav-background);
 }
 
+.footer-navigation {
+  display: grid;
+  grid-template-columns: 321px 1fr;
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+  padding: 0;
+}
+
+.footer-navigation-title {
+  display: none;
+}
+
+.footer-logo {
+  display: block;
+  /*Только так получилось задать размеры логотипу. Правильное направление (ссылкам-кнопкам задавать этот display)?*/
+  width: 220px;
+  height: 68px;
+  text-align: center;
+  background-color: var(--red);
+}
+
 .footer-contacts {
   color: var(--footer-text);
 }
 
 .repeated-navigation-list {
+  margin: 0;
+  padding: 0;
+  text-align: end;
   list-style: none;
 }
 
@@ -512,19 +675,40 @@
 }
 
 .site-info {
-  color: var(--white);
   font-size: 16px;
   line-height: 18px;
   background-color: var(--footer-info-background);
+  color: var(--white);
+}
+
+.site-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto auto;
+  height: 107px;
+}
+
+.site-info-title {
+  display: none;
+}
+
+.rights {
+  width: 227px;
+  margin: auto 0;
+}
+
+.visually-hidden {
+  display: none;
 }
 
 .social-icons {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .social-button {
-  color: var(--white);
   text-decoration: none;
+  color: var(--white);
   background: linear-gradient(0deg, #212A3A, #212A3A);
 }
 
@@ -534,6 +718,16 @@
 
 .social-button:active {
   background: var(--red);
+}
+
+.feedback {
+  width: 137px;
+  margin: auto 0;
+}
+
+.developer {
+  width: 98px;
+  margin: auto 0;
 }
 
 .html-academy {
