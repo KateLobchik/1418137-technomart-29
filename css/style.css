@@ -69,6 +69,8 @@
   --background-filter: #F7F3EC;
   --border-number-page: #E5E5E5;
   --about-perforators-background: var(--gray-white);
+  /*Size*/
+  --desktop-width: 960px;
   /*Fonts*/
   --main-fonts: "Cuprum", Arial, sans-serif;
   --descriptional-fonts: "PT Sans", Arial, sans-serif;
@@ -101,6 +103,24 @@
   background-color: var(--white);
 }
 
+.container {
+  width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
 /*Header*/
 
 .main-header {
@@ -115,12 +135,10 @@
 .main-menu-container {
   display: grid;
   grid-template-columns: 220px 1fr 150px 150px 150px;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 .main-logo {
+  display: block;
   width: 220px;
   height: 42px;
   text-align: center;
@@ -157,10 +175,7 @@
 
 .header-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .header-title {
@@ -287,22 +302,12 @@
 
 /*MAIN*/
 
-.container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0;
-}
-
 .express-navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 20px;
-  margin: 59px 0;
-}
-
-.express-navigation-title {
-  display: none;
+  padding: 59px 0;
 }
 
 .slider {
@@ -310,8 +315,6 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
-  width: 620px;
-  height: 266px;
   color: var(--white);
   /*Для видимости.. и у меня не получилось поднять на серой подложке div, чтобы уже норсвльно слайдер смотрелся.. :(*/
   outline: 5px solid rgba(0, 255, 0, 0.7);
@@ -319,13 +322,22 @@
 }
 
 .rectangle {
+  padding: 23px 356px 16px 24px;
   background-color: var(--slider-background);
 }
 
 .slider-title {
+  margin: 0;
+  padding: 0 0 5px 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
+  text-transform: uppercase;
+}
+
+.slider-description {
+  margin: 0;
+  padding: 0;
 }
 
 .red-button {
@@ -401,7 +413,6 @@
 .popular-headline {
   display: grid;
   grid-template-columns: 1fr max-content;
-  height: 89px;
   background-color: var(--popular-background);
 }
 
@@ -418,12 +429,12 @@
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 20px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .popular-products-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -431,8 +442,7 @@
 }
 
 .catalog-item {
-  width: 220px;
-  height: 318px;
+  height: 100%;
   font-family: var(--descriptional-fonts);
   border: 1px solid var(--item-border);
 }
@@ -505,12 +515,12 @@
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 20px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .popular-brand-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -518,8 +528,7 @@
 }
 
 .popular-brand-name {
-  width: 220px;
-  height: 145px;
+  height: 100%;
   border: 1px solid var(--item-border);
 }
 
@@ -530,9 +539,6 @@
 .services-container {
   display: grid;
   grid-template-rows: auto 1fr;
-  width: 940px;
-  margin: 0 auto;
-  margin-bottom: 70px;
   padding-top: 64px;
   padding-bottom: 99px;
 }
@@ -551,7 +557,7 @@
 
 .services-slider {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .one-service-name {
@@ -598,7 +604,8 @@
 .about-tehnomart {
   display: grid;
   grid-template-columns: 1fr min-content;
-  margin-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .delivery-companies {
@@ -615,19 +622,11 @@
 .footer-navigation {
   display: grid;
   grid-template-columns: 321px 1fr;
-  width: 940px;
-  margin: 0 auto;
   margin-bottom: 54px;
-  padding: 0;
-}
-
-.footer-navigation-title {
-  display: none;
 }
 
 .footer-logo {
   display: block;
-  /*Только так получилось задать размеры логотипу. Правильное направление (ссылкам-кнопкам задавать этот display)?*/
   width: 220px;
   height: 68px;
   text-align: center;
@@ -684,20 +683,12 @@
 .site-info-container {
   display: grid;
   grid-template-columns: 1fr 1fr auto auto;
-  height: 107px;
-}
-
-.site-info-title {
-  display: none;
+  padding-top: 34px;
+  padding-bottom: 29px;
 }
 
 .rights {
-  width: 227px;
   margin: auto 0;
-}
-
-.visually-hidden {
-  display: none;
 }
 
 .social-icons {
