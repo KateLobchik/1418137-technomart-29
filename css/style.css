@@ -128,13 +128,11 @@
 }
 
 .main-menu {
-  height: 42px;
   background-color: var(--dark-blue);
 }
 
 .main-menu-container {
-  display: grid;
-  grid-template-columns: 220px 1fr 150px 150px 150px;
+  display: flex;
 }
 
 .main-logo {
@@ -341,12 +339,12 @@
 }
 
 .red-button {
-  width: 192px;
-  height: 38px;
-  text-align: center;
-  text-decoration: none;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-size: var(--font-button);
   line-height: 18px;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--red);
@@ -358,6 +356,11 @@
 
 .red-button:active {
   background-color: var(--error);
+}
+
+.slider-red-button {
+  padding-right: 46px;
+  padding-left: 46px;
 }
 
 /*Спрятала слайд с дрелью*/
@@ -414,15 +417,22 @@
   display: grid;
   grid-template-columns: 1fr max-content;
   background-color: var(--popular-background);
+  padding: 29px 19px 30px 29px;
 }
 
 .popular-headline-title {
+  margin: 0;
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-title);
   line-height: 30px;
   text-transform: uppercase;
   color: var(--blue);
+}
+
+.popular-headline-button {
+  padding-right: 38px;
+  padding-left: 39px;
 }
 
 .popular-products {
@@ -591,6 +601,7 @@
 }
 
 .credit-button {
+  padding: 11px 38px 9px 39px;
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-button);
@@ -610,6 +621,17 @@
 
 .delivery-companies {
   list-style: none;
+}
+
+.about-company-button {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.contacts-button {
+  padding-right: 61px;
+  padding-left: 62px;
+  /*Но здесь скорее всего будет флекс растягивать во всю ширину?*/
 }
 
 /*Footer*/
@@ -692,6 +714,7 @@
 }
 
 .social-icons {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -709,16 +732,6 @@
 
 .social-button:active {
   background: var(--red);
-}
-
-.feedback {
-  width: 137px;
-  margin: auto 0;
-}
-
-.developer {
-  width: 98px;
-  margin: auto 0;
 }
 
 .html-academy {
