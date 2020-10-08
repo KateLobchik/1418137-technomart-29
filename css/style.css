@@ -339,8 +339,7 @@
 }
 
 .red-button {
-  padding-top: 11px;
-  padding-bottom: 9px;
+  padding: 11px 24px 9px 24px;
   font-size: var(--font-button);
   line-height: 18px;
   text-align: center;
@@ -356,11 +355,6 @@
 
 .red-button:active {
   background-color: var(--error);
-}
-
-.slider-red-button {
-  padding-right: 46px;
-  padding-left: 46px;
 }
 
 /*Спрятала слайд с дрелью*/
@@ -428,11 +422,6 @@
   line-height: 30px;
   text-transform: uppercase;
   color: var(--blue);
-}
-
-.popular-headline-button {
-  padding-right: 38px;
-  padding-left: 39px;
 }
 
 .popular-products {
@@ -558,6 +547,8 @@
 }
 
 .section-title {
+  margin: 0;
+  padding-bottom: 25px;
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-title);
@@ -575,6 +566,7 @@
 }
 
 .text-description {
+  margin: 0;
   font-family: var(--descriptional-fonts);
   font-size: var(--font-descriptional);
   line-height: 24px;
@@ -621,17 +613,6 @@
 
 .delivery-companies {
   list-style: none;
-}
-
-.about-company-button {
-  padding-right: 40px;
-  padding-left: 40px;
-}
-
-.contacts-button {
-  padding-right: 61px;
-  padding-left: 62px;
-  /*Но здесь скорее всего будет флекс растягивать во всю ширину?*/
 }
 
 /*Footer*/
@@ -749,7 +730,22 @@
 
 /*CATALOG*/
 
+.main-container-catalog {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 20px;
+  padding-bottom: 59px;
+}
+
 .breadcrumbs {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  margin: 0;
+  padding: 21px 0 0 0;
   list-style: none;
 }
 
@@ -765,26 +761,68 @@
 }
 
 .catalog-main-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0;
+  padding-top: 29px;
+  padding-bottom: 30px;
+  padding-left: 29px;
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-title);
   line-height: 30px;
   color: var(--blue);
   text-transform: uppercase;
+  box-sizing: border-box;
   background-color: var(--background-catalog-title);
 }
 
+.filter {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.sorting {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.filter-container {
+  padding: 10px 0;
+  background-color: var(--background-filter);
+}
+
+.filter-filter {
+  padding-left: 18px;
+}
+
+.filter-sorting {
+  padding-left: 19px;
+}
+
 .filter-name {
+  margin: 0;
   font-family: var(--descriptional-fonts);
   font-style: normal;
   font-weight: normal;
   font-size: var(--font-descriptional);
   line-height: 18px;
   text-transform: uppercase;
-  background-color: var(--background-filter);
+}
+
+.catalog-items-title {
+  display: none;
 }
 
 .list-pages {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -802,6 +840,7 @@
 }
 
 .about-perforators {
+  padding: 64px 0 68px 0;
   background-color: var(--about-perforators-background);
 }
 
