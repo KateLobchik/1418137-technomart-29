@@ -732,17 +732,13 @@
 
 .main-container-catalog {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-areas: 'breadcrumbs breadcrumbs breadcrumbs breadcrumbs' 'title title title title' 'filter sorting sorting sorting' 'filter catalog catalog catalog' '. pagination pagination pagination';
   gap: 20px;
   padding-bottom: 59px;
 }
 
 .breadcrumbs {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-area: breadcrumbs;
   display: flex;
   margin: 0;
   padding: 21px 0 0 0;
@@ -761,10 +757,7 @@
 }
 
 .catalog-main-title {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-area: title;
   margin: 0;
   padding-top: 29px;
   padding-bottom: 30px;
@@ -780,17 +773,11 @@
 }
 
 .filter {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  grid-area: filter;
 }
 
 .sorting {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-area: sorting;
 }
 
 .filter-container {
@@ -816,11 +803,16 @@
   text-transform: uppercase;
 }
 
+.catalog {
+  grid-area: catalog;
+}
+
 .catalog-items-title {
   display: none;
 }
 
 .list-pages {
+  grid-area: pagination;
   margin: 0;
   padding: 0;
   list-style: none;
