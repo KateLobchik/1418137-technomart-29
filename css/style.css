@@ -146,14 +146,11 @@
 
 .search {
   width: 271px;
+  margin: auto;
 }
 
 .search-field {
   height: 42px;
-}
-
-.menu-buttons {
-  margin-right: auto;
 }
 
 .menu-button {
@@ -712,12 +709,16 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .service-button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
   padding-top: 13.5px;
   padding-bottom: 17.5px;
   padding-left: 22px;
