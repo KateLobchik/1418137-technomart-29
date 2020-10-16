@@ -19,29 +19,34 @@
         <a class="main-logo" href="index.html">
           <img class="logo-img" src="img/logo/logo-technomart.svg" width="108" height="18" alt="«Техномарт»">
         </a>
-        <input class="search" type="search">
-        <a class="menu-button favorites" href="">Закладки: 0</a>
-        <a class="menu-button basket" href="">Корзина: 0</a>
+        <form class="search">
+          <input class="search-field" type="search">
+        </form>
+        <a class="menu-button favorites" href="">Закладки: <span>0</span></a>
+        <a class="menu-button basket" href="">Корзина: <span>0</span></a>
         <a class="menu-button order" href="">Оформить заказ</a>
       </div>
     </div>
 
-    <div class="container header-container">
-      <h1 class="header-title">
-        Интернет-магазин<br>
-        строительных материалов<br>
-        и инструментов для ремонта
-      </h1>
+    <div class="container">
+      <div class="header-container">
+        <h1 class="header-title">
+          Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
+        </h1>
 
-      <p class="main-contacts">
-        <a class="phone-numder" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      </p>
+        <p class="main-contacts">
+          <a class="phone-numder" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </p>
 
-      <p class="user-account">
-        <a class="user-account-button login-link" href="">Войти</a>
-        <a class="user-account-button registration" href="">Регистрация</a>
-      </p>
+        <p class="user-account">
+          <a class="user-account-button login-link" href="">Войти</a>
+          <a class="user-account-button registration" href="">Регистрация</a>
+        </p>
+
+      </div>
 
       <nav class="main-navigation">
         <ul class="main-navigation-list">
@@ -178,7 +183,9 @@
               </a>
             </div>
             <div class="items-info">
-              <h3 class="catalog-item-title"><a class="item-name" href="">Перфоратор BOSCH BFG 3000</a></h3>
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 3000</a>
+              </h3>
               <p class="price old-price">
                 22500 Р.
               </p>
@@ -225,9 +232,6 @@
             </div>
             <div class="items-info">
               <h3 class="catalog-item-title"><a class="item-name" href="">Перфоратор BOSCH BFG 2000</a></h3>
-              <p class="price old-price old-price-hidden">
-                12500 Р.
-              </p>
               <p class="price new-price">
                 12500 Р.
               </p>
@@ -312,19 +316,15 @@
 
         <div class="services-slider">
           <!--Как слайдер-->
-          <ul class="service-name">
-            <li>
-              <button class="service-button service-delivery" type="button">Доставка</button>
-            </li>
+          <div class="service-names">
 
-            <li>
-              <button class="service-button service-guarantee" type="button">Гарантия</button>
-            </li>
+            <button class="service-button service-delivery" type="button">Доставка</button>
 
-            <li>
-              <button class="service-button service-credit" type="button">Кредит</button>
-            </li>
-          </ul>
+            <button class="service-button service-guarantee" type="button">Гарантия</button>
+
+            <button class="service-button service-credit" type="button">Кредит</button>
+
+          </div>
 
           <div class="description-service">
             <!--Как блок со слайдами-->
