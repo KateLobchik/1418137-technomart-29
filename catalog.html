@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap">
-  <link href="normalize.css" rel="stylesheet">
+  <!--<link href="normalize.css" rel="stylesheet">-->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -21,17 +21,21 @@
         <a class="main-logo" href="index.html">
           <img class="logo-img" src="img/logo/logo-technomart.svg" width="108" height="18" alt="«Техномарт»">
         </a>
-        <input class="search" type="search">
-        <a class="menu-button favorites" href="">Закладки</a>
-        <a class="menu-button basket" href="">Корзина</a>
+        <form class="search">
+          <input class="search-field" type="search">
+        </form>
+        <a class="menu-button favorites" href="">Закладки: <span>0</span></a>
+        <a class="menu-button basket" href="">Корзина: <span>0</span></a>
         <a class="menu-button order" href="">Оформить заказ</a>
       </div>
     </div>
 
     <div class="container header-container">
-      <h1 class="header-title">
-        Интернет-магазин строительных материалов и инструментов для ремонта
-      </h1>
+      <p class="header-title">
+        Интернет-магазин<br>
+        строительных материалов<br>
+        и инструментов для ремонта
+      </p>
 
       <p class="main-contacts">
         <a class="phone-numder" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -41,9 +45,9 @@
 
       <div class="user-account">
         <div class="user-account-container">
-          <p class="user-account-button user-account-name">
-            <a class="user-name" href="">Равшан Джамшутович</a>
-            <!--<a class="log-out" href="">Выйти</a> -->
+          <p class="user-name-button">
+            <a class="user-name user-account-button" href="">Равшан Джамшутович</a>
+            <a class="log-out user-account-button" href="" aria-label="Выйти"></a>
           </p>
           <a class="user-account-menu my-oders" href="">Мои заказы</a>
           <a class="user-account-menu all-account" href="">Личный кабинет</a>
@@ -101,172 +105,208 @@
       </section>
 
       <section class="catalog">
-        <h2 class="catalog-items-title">Список товаров</h2>
+        <h2 class="catalog-items-title visually-hidden">Список товаров</h2>
 
         <div class="catalog-list">
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
-            </h3>
-            <p class="price old-price">
-              30500 Р.
-            </p>
-            <p class="price new-price">
-              25500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <p class="price old-price">
+                30500 Р.
+              </p>
+              <p class="price new-price">
+                25500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
-            </h3>
-            <p class="price old-price">
-              30500 Р.
-            </p>
-            <p class="price new-price">
-              25500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <p class="price old-price">
+                30500 Р.
+              </p>
+              <p class="price new-price">
+                25500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
-            </h3>
-            <p class="price old-price">
-              30500 Р.
-            </p>
-            <p class="price new-price">
-              25500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <p class="price old-price">
+                30500 Р.
+              </p>
+              <p class="price new-price">
+                25500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a class="item-name" href="">
+                <img src="img/items/item-BFG-3000.jpg" width="127" height="112" alt="">
+              </a>
             </div>
-            <a class="item-name" href="">
-              <img src="img/items/item-BFG-3000.jpg" width="127" height="112" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 3000</a>
-            </h3>
-            <p class="price old-price">
-              22500 Р.
-            </p>
-            <p class="price new-price">
-              15500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 3000</a>
+              </h3>
+              <p class="price old-price">
+                22500 Р.
+              </p>
+              <p class="price new-price">
+                15500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a class="item-name" href="">
+                <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
+              </a>
             </div>
-            <a class="item-name" href="">
-              <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
-            </h3>
-            <p class="price old-price">
-              30500 Р.
-            </p>
-            <p class="price new-price">
-              25500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <p class="price old-price">
+                30500 Р.
+              </p>
+              <p class="price new-price">
+                25500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-2000.jpg" width="127" height="112" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-2000.jpg" width="127" height="112" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 2000</a>
-            </h3>
-            <p class="price new-price">
-              12500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 2000</a>
+              </h3>
+              <p class="price new-price">
+                12500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-3000.jpg" width="127" height="112" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-3000.jpg" width="127" height="112" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 3000</a>
-            </h3>
-            <p class="price old-price">
-              22500 Р.
-            </p>
-            <p class="price new-price">
-              15500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 3000</a>
+              </h3>
+              <p class="price old-price">
+                22500 Р.
+              </p>
+              <p class="price new-price">
+                15500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-6000.jpg" width="144" height="128" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
-            </h3>
-            <p class="price old-price">
-              30500 Р.
-            </p>
-            <p class="price new-price">
-              25500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <p class="price old-price">
+                30500 Р.
+              </p>
+              <p class="price new-price">
+                25500 Р.
+              </p>
+            </div>
           </article>
 
           <article class="catalog-item">
-            <div class="user-choice">
-              <a class="user-choice-button buy-button" href="">Купить</a>
-              <a class="user-choice-button favorites-button" href="">В закладки</a>
+            <div class="item-img-choice">
+              <div class="user-choice visually-hidden">
+                <a class="user-choice-button buy-button" href="">Купить</a>
+                <a class="user-choice-button favorites-button" href="">В закладки</a>
+              </div>
+              <a href="">
+                <img src="img/items/item-BFG-2000.jpg" width="127" height="112" alt="">
+              </a>
             </div>
-            <a href="">
-              <img src="img/items/item-BFG-2000.jpg" width="127" height="112" alt="">
-            </a>
-            <h3>
-              <a class="item-name" href="">Перфоратор BOSCH BFG 2000</a>
-            </h3>
-            <p class="price new-price">
-              12500 Р.
-            </p>
+            <div class="items-info">
+              <h3 class="catalog-item-title">
+                <a class="item-name" href="">Перфоратор BOSCH BFG 2000</a>
+              </h3>
+              <p class="price new-price">
+                12500 Р.
+              </p>
+            </div>
           </article>
         </div>
 
@@ -292,12 +332,11 @@
       <div class="container content-about-perforators">
         <h2 class="section-title">Пара слов о перфораторах</h2>
         <p class="text-description">Перфоратор — универсальный строительный инструмент.
-          Предназначен для сверления и долбления отверстий в кирпиче,бетоне и камне.
+          Предназначен для сверления и долбления отверстий в кирпиче,бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы.
-          Современные модели могут выполнять функции дрели,шуруповерта и отбойного молотка.
+          Современные модели могут выполнять функции дрели,шуруповерта и отбойного молотка.<br>
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
-          ударная
-          дрель.
+          ударная дрель.
         </p>
       </div>
     </section>

@@ -74,10 +74,10 @@
   /*Fonts*/
   --main-fonts: "Cuprum", Arial, sans-serif;
   --descriptional-fonts: "PT Sans", Arial, sans-serif;
-  --font-body: 18px;
-  --font-title: 30px;
-  --font-descriptional: 13px;
-  --font-button: 14px;
+  --size-font-body: 18px;
+  --size-font-title: 30px;
+  --size-font-descriptional: 13px;
+  --size-font-button: 14px;
 }
 
 /*Global*/
@@ -97,7 +97,7 @@
   font-family: var(--main-fonts);
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-body);
+  font-size: var(--size-font-body);
   line-height: 24px;
   color: var(--black);
   background-color: var(--white);
@@ -199,14 +199,15 @@
 
 .header-container {
   display: grid;
-  grid-template-columns: auto 270px 1fr;
-  padding: 42.5px 0 40px 30px;
+  grid-template-columns: 320px 270px 1fr;
+  padding-top: 43px;
+  padding-bottom: 60px;
 }
 
 .header-title {
   margin: 0;
-  margin-right: 110px;
   padding: 0;
+  padding-left: 30px;
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
@@ -247,7 +248,7 @@
 
 .user-account-button {
   display: block;
-  margin-right: 10px;
+  margin-left: 10px;
   padding: 12px 30px;
   box-sizing: border-box;
   text-decoration: none;
@@ -255,10 +256,6 @@
   line-height: 21px;
   color: var(--black);
   background-color: var(--white);
-}
-
-.user-account-button:last-child {
-  margin-right: 0;
 }
 
 .login-link {
@@ -287,7 +284,19 @@
   color: var(--light-gray);
 }
 
+.user-account-container {
+  text-align: center;
+}
+
+.user-name-button {
+  display: flex;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
 .user-name {
+  padding-left: 56px;
+  padding-right: 11px;
   text-decoration: none;
   color: var(--black);
 }
@@ -297,6 +306,8 @@
 }
 
 .log-out {
+  margin: 0;
+  padding: 14px 23px;
   text-decoration: none;
   color: var(--light-gray);
 }
@@ -310,6 +321,7 @@
 }
 
 .user-account-menu {
+  margin: 0;
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
@@ -335,7 +347,7 @@
 .main-navigation {
   grid-column-start: 1;
   grid-column-end: 4;
-  margin-bottom: 60px;
+  margin-top: 40px;
   background-color: var(--main-nav-background);
 }
 
@@ -406,7 +418,7 @@
 
 .red-button {
   padding: 11px 24px 9px 24px;
-  font-size: var(--font-button);
+  font-size: var(--size-font-button);
   line-height: 18px;
   text-align: center;
   text-decoration: none;
@@ -456,7 +468,7 @@
   margin-right: auto;
   padding: 10px 0;
   text-align: center;
-  font-size: var(--font-button);
+  font-size: var(--size-font-button);
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
@@ -504,7 +516,7 @@
   margin: 0;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-title);
+  font-size: var(--size-font-title);
   line-height: 30px;
   text-transform: uppercase;
   color: var(--blue);
@@ -566,7 +578,7 @@
   text-align: center;
   box-sizing: border-box;
   font-weight: bold;
-  font-size: var(--font-body);
+  font-size: var(--size-font-body);
   line-height: 20px;
   text-decoration: none;
   color: var(--black);
@@ -599,7 +611,7 @@
 
 .user-choice {
   font-family: var(--main-fonts);
-  font-size: var(--font-button);
+  font-size: var(--size-font-button);
   line-height: 18px;
   text-transform: uppercase;
 }
@@ -690,7 +702,7 @@
   padding-bottom: 25px;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-title);
+  font-size: var(--size-font-title);
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -737,7 +749,7 @@
 .text-description {
   margin: 0;
   font-family: var(--descriptional-fonts);
-  font-size: var(--font-descriptional);
+  font-size: var(--size-font-descriptional);
   line-height: 24px;
 }
 
@@ -765,7 +777,7 @@
   padding: 11px 38px 9px 39px;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-button);
+  font-size: var(--size-font-button);
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
@@ -976,7 +988,8 @@
 
 .main-container-catalog {
   display: grid;
-  grid-template-areas: 'breadcrumbs breadcrumbs breadcrumbs breadcrumbs' 'title title title title' 'filter sorting sorting sorting' 'filter catalog catalog catalog' '. pagination pagination pagination';
+  grid-template-columns: 220px 1fr;
+  grid-template-areas: 'breadcrumbs breadcrumbs' 'title title' 'filter sorting' 'filter catalog';
   gap: 20px;
   padding-bottom: 59px;
 }
@@ -985,7 +998,8 @@
   grid-area: breadcrumbs;
   display: flex;
   margin: 0;
-  padding: 21px 0 0 0;
+  margin-top: 16px;
+  padding: 0;
   list-style: none;
 }
 
@@ -993,7 +1007,7 @@
   font-family: var(--descriptional-fonts);
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-descriptional);
+  font-size: var(--size-font-descriptional);
   line-height: 18px;
   text-transform: uppercase;
   color: var(--black);
@@ -1008,7 +1022,7 @@
   padding-left: 29px;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-title);
+  font-size: var(--size-font-title);
   line-height: 30px;
   color: var(--blue);
   text-transform: uppercase;
@@ -1042,7 +1056,7 @@
   font-family: var(--descriptional-fonts);
   font-style: normal;
   font-weight: normal;
-  font-size: var(--font-descriptional);
+  font-size: var(--size-font-descriptional);
   line-height: 18px;
   text-transform: uppercase;
 }
@@ -1051,28 +1065,54 @@
   grid-area: catalog;
 }
 
-.catalog-items-title {
-  display: none;
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 18px;
+  column-gap: 20px;
+  padding-top: 8px;
+  padding-bottom: 48px;
 }
 
 .list-pages {
-  grid-area: pagination;
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .number-page {
+  display: block;
+  margin-right: 10px;
+  padding: 10px 15px;
+  box-sizing: border-box;
   font-family: var(--descriptional-fonts);
-  font-size: var(--font-descriptional);
+  font-size: var(--size-font-descriptional);
   line-height: 18px;
   color: var(--black);
   text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--border-number-page);
+  border-radius: 2px;
+}
+
+.number-page:hover, .number-page:focus {
+  border-color: var(--light-gray);
+}
+
+.number-page:active {
+  border-color: var(--red);
 }
 
 .number-page-current {
   color: var(--white);
   background-color: var(--red);
+  border-width: 0;
+}
+
+.next-page {
+  padding-right: 31px;
+  padding-left: 32px;
 }
 
 .about-perforators {
