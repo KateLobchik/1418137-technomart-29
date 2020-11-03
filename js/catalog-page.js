@@ -1,8 +1,11 @@
+"use strict";
 
+
+/*MODAL FOR BASKET & FAVORITES*/
 
 const favoritesLinks = document.querySelectorAll(".favorites-button");
 const menuFavorites = document.querySelector(".favorites");
-const favoritesNumber = document.querySelector(".favorites-number");
+let favoritesNumber = document.querySelector(".favorites-number");
 let counterFavorites = 0;
 
 

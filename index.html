@@ -8,7 +8,8 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styly-optimized.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -21,7 +22,15 @@
           <img class="logo-img" src="img/logo/logo-technomart.svg" width="108" height="18" alt="«Техномарт»">
         </div>
         <form class="search">
-          <input class="search-field" type="search" placeholder="Поиск:">
+          <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+          <input class="search-field" type="search" id="search-field" placeholder="Поиск:">
+          <button class="search-button" type="submit" aria-label="Кнопка поиска">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                fill="currentColor" />
+            </svg>
+          </button>
         </form>
         <div class="main-menu-buttons">
           <a class="menu-button favorites" href="">Закладки: <span class="favorites-number">0</span></a>
@@ -48,10 +57,10 @@
         <a class="user-account-button login-link" href="">
           <svg class="icon-login" width="20" height="17" viewBox="0 0 20 17" fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5" />
+            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="currentColor" />
             <path
               d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z"
-              fill="#C5C5C5" />
+              fill="currentColor" />
           </svg>
           <span>Войти</span>
         </a>
@@ -79,18 +88,11 @@
       <section class="express-navigation">
         <h2 class="visually-hidden">Экспресс-навигация по каталогу</h2>
 
-        <div class="slider slider-wrapper-perforators">
+        <div class="slider">
           <!--Слайдер-->
 
           <ul class="slides-list">
             <!--Слайды-->
-            <li class="slide slide-perforators slide-current">
-              <div class="rectangle">
-                <h3 class="slider-title">Перфораторы</h3>
-                <p class="slider-description">Настоящие мужские игрушки</p>
-              </div>
-              <a class="red-button slider-red-button open-perforators" href="catalog.html">Открыть каталог</a>
-            </li>
             <li class="slide slide-drills">
               <div class="rectangle">
                 <h3 class="slider-title">Дрели</h3>
@@ -98,11 +100,18 @@
               </div>
               <a class="red-button slider-red-button open-drills" href="">Открыть каталог</a>
             </li>
+            <li class="slide slide-perforators slide-current">
+              <div class="rectangle">
+                <h3 class="slider-title">Перфораторы</h3>
+                <p class="slider-description">Настоящие мужские игрушки</p>
+              </div>
+              <a class="red-button slider-red-button open-perforators" href="catalog.html">Открыть каталог</a>
+            </li>
           </ul>
 
           <div class="slider-control-buttons">
             <!--Кнопки управления-->
-            <button class="slider-button" type="button" aria-label="Назад"></button>
+            <button class="slider-button slider-button-back" type="button" aria-label="Назад"></button>
             <button class=" slider-button slider-button-next" type="button" aria-label="Вперёд"></button>
           </div>
 
@@ -153,6 +162,9 @@
 
           <article class="catalog-item">
             <div class="items-info">
+              <div class="item-image">
+                <img src="img/items/item-bfg-9000.jpg" width="218" height="178" alt="">
+              </div>
               <h3 class="catalog-item-title"><a class="item-name" href="">Перфоратор BOSCH<br>BFG 9000</a></h3>
               <p class="price old-price">
                 32500 Р.
@@ -161,19 +173,17 @@
                 25500 Р.
               </p>
             </div>
-            <div class="item-img-choice">
-              <div class="user-choice">
-                <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
-                <a class="user-choice-button favorites-button" href="">В закладки</a>
-              </div>
-              <div class="item-image">
-                <img src="img/items/item-bfg-9000.jpg" width="184" height="164" alt="">
-              </div>
+            <div class="user-choice">
+              <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
+              <a class="user-choice-button favorites-button" href="">В закладки</a>
             </div>
           </article>
 
           <article class="catalog-item new">
             <div class="items-info">
+              <div class="item-image">
+                <img src="img/items/item-bfg-3000.jpg" width="218" height="178" alt="">
+              </div>
               <h3 class="catalog-item-title"><a class="item-name" href="">Перфоратор BOSCH<br>BFG 3000</a></h3>
               <p class="price old-price">
                 22500 Р.
@@ -182,19 +192,17 @@
                 15500 Р.
               </p>
             </div>
-            <div class="item-img-choice">
-              <div class="user-choice">
-                <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
-                <a class="user-choice-button favorites-button" href="">В закладки</a>
-              </div>
-              <div class="item-image image-bosch-little">
-                <img src="img/items/item-bfg-3000.jpg" width="127" height="112" alt="">
-              </div>
+            <div class="user-choice">
+              <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
+              <a class="user-choice-button favorites-button" href="">В закладки</a>
             </div>
           </article>
 
           <article class="catalog-item">
             <div class="items-info">
+              <div class="item-image image-bosch-6000">
+                <img src="img/items/item-bfg-6000.jpg" width="218" height="178" alt="">
+              </div>
               <h3 class="catalog-item-title"><a class="item-name" href="">Перфоратор BOSCH<br>BFG 6000</a></h3>
               <p class="price old-price">
                 30500 Р.
@@ -203,32 +211,25 @@
                 25500 Р.
               </p>
             </div>
-            <div class="item-img-choice">
-              <div class="user-choice">
-                <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
-                <a class="user-choice-button favorites-button" href="">В закладки</a>
-              </div>
-              <div class="item-image image-bosch-6000">
-                <img src="img/items/item-bfg-6000.jpg" width="144" height="128" alt="">
-              </div>
+            <div class="user-choice">
+              <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
+              <a class="user-choice-button favorites-button" href="">В закладки</a>
             </div>
           </article>
 
-          <article class="catalog-item">
+          <article class="catalog-item new">
             <div class="items-info">
+              <div class="item-image image-bosch-little">
+                <img src="img/items/item-bfg-2000.jpg" width="218" height="178" alt="">
+              </div>
               <h3 class="catalog-item-title"><a class="item-name" href="">Перфоратор BOSCH<br>BFG 2000</a></h3>
               <p class="price new-price">
                 12500 Р.
               </p>
             </div>
-            <div class="item-img-choice">
-              <div class="user-choice">
-                <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
-                <a class="user-choice-button favorites-button" href="">В закладки</a>
-              </div>
-              <div class="item-image image-bosch-little">
-                <img src="img/items/item-bfg-2000.jpg" width="127" height="112" alt="">
-              </div>
+            <div class="user-choice">
+              <a class="user-choice-button buy-button" href="" aria-label="Добавить в корзину">Купить</a>
+              <a class="user-choice-button favorites-button" href="">В закладки</a>
             </div>
           </article>
 
@@ -244,35 +245,35 @@
         <div class="popular-brand-list">
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/bosch.png" width="126" height="37" alt="BOSCH">
+            <img src="img/logo/brands/bosch.png" width="216" height="141" alt="BOSCH">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/makita.png" width="123" height="40" alt="Makita">
+            <img src="img/logo/brands/makita.png" width="216" height="141" alt="Makita">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/dewalt.png" width="146" height="44" alt="DeWALT">
+            <img src="img/logo/brands/dewalt.png" width="216" height="141" alt="DeWALT">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/interskol.png" width="200" height="76" alt="Интерскол">
+            <img src="img/logo/brands/interskol.png" width="216" height="141" alt="Интерскол">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/hitachi.png" width="169" height="31" alt="Hitachi">
+            <img src="img/logo/brands/hitachi.png" width="216" height="141" alt="Hitachi">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/lg.png" width="121" height="73" alt="LG">
+            <img src="img/logo/brands/lg.png" width="216" height="141" alt="LG">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/aeg.png" width="151" height="98" alt="AEG">
+            <img src="img/logo/brands/aeg.png" width="216" height="141" alt="AEG">
           </a>
 
           <a class="popular-brand-name" href="">
-            <img src="img/logo/brands/metabo.png" width="206" height="73" alt="Metabo">
+            <img src="img/logo/brands/metabo.png" width="216" height="141" alt="Metabo">
           </a>
 
         </div>
@@ -455,7 +456,7 @@
 
         <p class="developer">
           Разработано —<br>
-          <a class="html-academy" href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
 
       </div>
@@ -507,12 +508,8 @@
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <script src="js/modal-feedback.js"></script>
-  <script src="js/modal-map.js"></script>
-  <script src="js/favorites-basket.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/service.js"></script>
 
+  <script src="js/main-page-minificate.js"></script>
 </body>
 
 </html>
