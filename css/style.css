@@ -264,12 +264,13 @@ svg {
 
 .search:focus-within .search-button {
     color: var(--red);
-    opacity: 0.7;
+    opacity: 1;
     outline: none;
 }
 
 .search:focus-within .search-button:focus   {
     transform: scale(1.4); /*Может быть вот так будет хорошо? Что лупа в фокусе увеличивается и становиться ярче.. потому что у меня белый фон становиться у всей формы поиска, когда один из элементов в фокусе.. */
+    color: var(--dark-red);
     opacity: 1;
 }
 
