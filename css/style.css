@@ -1735,14 +1735,14 @@ svg {
 .filter-item::after {
     content: "";
     position: absolute;
-    top: 26px;
+    bottom: -27px;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: var(--light-gray-30);
 }
 
-.filter-item:first-child::after {
+.filter-item:last-of-type::after {
     display: none;
 }
 
