@@ -91,6 +91,7 @@
 
 .page-body {
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     min-width: 940px;
     min-height: 100%;
@@ -217,6 +218,14 @@ svg {
     border: none;
 }
 
+.search-field::-webkit-input-placeholder {
+    color: var(--white);
+}
+
+.search-field::-moz-placeholder {
+    color: var(--white);
+}
+
 .search-field::placeholder {
     color: var(--white);
 }
@@ -249,14 +258,19 @@ svg {
     opacity: 1;
 }
 
-.search-field:focus, .search:focus-within .search-field {
+.search-field:focus {
     outline: none;
 }
 
-.search-button:focus, .search:focus-within .search-button {
+.search:focus-within .search-button {
     color: var(--red);
-    opacity: 1;
+    opacity: 0.7;
     outline: none;
+}
+
+.search:focus-within .search-button:focus   {
+    transform: scale(1.4); /*Может быть вот так будет хорошо? Что лупа в фокусе увеличивается и становиться ярче.. потому что у меня белый фон становиться у всей формы поиска, когда один из элементов в фокусе.. */
+    opacity: 1;
 }
 
 .main-menu-buttons {
@@ -1107,7 +1121,8 @@ svg {
 
 .old-price {
     padding-bottom: 13px;
-    text-decoration-line: line-through;
+    -webkit-text-decoration-line: line-through;
+            text-decoration-line: line-through;
     color: var(--item-old-price);
 }
 
@@ -1603,6 +1618,9 @@ svg {
 }
 
 .breadcrumbs {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: breadcrumbs;
     display: flex;
     flex-wrap: wrap;
@@ -1667,6 +1685,9 @@ svg {
 }
 
 .catalog-main-title {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: title;
     margin: 0;
     padding-top: 29px;
@@ -1683,6 +1704,9 @@ svg {
 }
 
 .filter {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
     grid-area: filter;
     font-family: var(--descriptional-fonts);
 }
@@ -1852,7 +1876,9 @@ svg {
     position: relative;
     display: block;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 
 .filter-input-checkbox+.filter-option-label::before {
@@ -1950,6 +1976,8 @@ svg {
 }
 
 .sorting {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
     grid-area: sorting;
     display: flex;
     justify-content: space-between;
@@ -2042,6 +2070,8 @@ svg {
 }
 
 .catalog {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
     grid-area: catalog;
 }
 
@@ -2049,7 +2079,8 @@ svg {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 18px;
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
     padding-top: 9px;
     padding-bottom: 47px;
 }
@@ -2126,7 +2157,8 @@ svg {
 
 .modal-show {
     display: block;
-    animation: downride 1s;
+    -webkit-animation: downride 1s;
+            animation: downride 1s;
 }
 
 .modal-close {
@@ -2218,6 +2250,14 @@ svg {
     resize: none;
 }
 
+.feedback-form-field::-webkit-input-placeholder {
+    color: var(--light-gray-other);
+}
+
+.feedback-form-field::-moz-placeholder {
+    color: var(--light-gray-other);
+}
+
 .feedback-form-field::placeholder {
     color: var(--light-gray-other);
 }
@@ -2242,6 +2282,10 @@ svg {
     height: 442px;
     background-image: url("../img/index/popap-map.jpg");
     background-size: 943px 442px;
+}
+
+.interactive-map {
+    border: none;
 }
 
 /*MODAL-BASKET*/
@@ -2304,6 +2348,21 @@ svg {
 }
 
 /*ANIMATION*/
+
+@-webkit-keyframes downride {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 @keyframes downride {
     0% {
