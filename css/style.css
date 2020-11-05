@@ -200,7 +200,7 @@ svg {
     width: 100%;
     margin: auto;
     padding: 0;
-    padding-left: 17px;
+    padding-left: 14px;
     background-color: transparent;
     box-sizing: border-box;
     border: none;
@@ -235,11 +235,9 @@ svg {
 }
 
 .search-button {
-    width: 17px;
-    height: 17px;
     margin: 0;
-    margin-right: 8px;
-    padding: 0;
+    margin-right: 6px;
+    padding: 3px 3px 0;
     color: var(--white);
     opacity: 0.3;
     background-color: transparent;
@@ -258,19 +256,12 @@ svg {
     opacity: 1;
 }
 
-.search-field:focus {
+.search-field:focus, .search:focus-within .search-field {
     outline: none;
 }
 
-.search:focus-within .search-button {
+.search-button:focus, .search:focus-within .search-button {
     color: var(--red);
-    opacity: 1;
-    outline: none;
-}
-
-.search:focus-within .search-button:focus   {
-    transform: scale(1.4); /*Может быть вот так будет хорошо? Что лупа в фокусе увеличивается и становиться ярче.. потому что у меня белый фон становиться у всей формы поиска, когда один из элементов в фокусе.. */
-    color: var(--dark-red);
     opacity: 1;
 }
 
