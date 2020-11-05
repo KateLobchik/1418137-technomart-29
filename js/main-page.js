@@ -87,18 +87,48 @@ for (let i = 0; i < serviceButtons.length; i++) {
 
 const feedbackLink = document.querySelector(".contacts-button-map");
 const feedbackPopup = document.querySelector(".modal-feedback");
+const feedbackForm = feedbackPopup.querySelector(".modal-contacts-form");
+const userName = feedbackPopup.querySelector(".feedback-user-name");
+const userEmail = feedbackPopup.querySelector(".feedback-email");
+const userAsk = feedbackPopup.querySelector(".feedback-ask");
 const feedbackClose = feedbackPopup.querySelector(".modal-close");
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+    storage = localStorage.getItem("login");
+} catch (err) {
+    isStorageSupport = false;
+}
 
 feedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.add("modal-show");
+
+    if (storage) {
+        loginLogin.value = storage;
+    }
+
+    feedbackPopup.classList.remove("modal-error");
 });
 
 feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.remove("modal-show");
+    feedbackPopup.classList.remove("modal-error");
 });
 
+feedbackForm.addEventListener("submit", function (evt) {
+    if (!userName.value || !userEmail.value || !userAsk.value) {
+        evt.preventDefault();
+        feedbackPopup.classList.add("modal-error");
+    } else {
+        if (isStorageSupport) {
+            localStorage.setItem("login", userName.value);
+        }
+    }
+});
 
 /*MODAL-MAP*/
 
@@ -124,17 +154,14 @@ const menuFavorites = document.querySelector(".favorites");
 const favoritesNumber = document.querySelector(".favorites-number");
 let counterFavorites = 0;
 
-
 const basketLinks = document.querySelectorAll(".buy-button");
 const menubasket = document.querySelector(".basket");
 const basketNumber = document.querySelector(".basket-number");
 let counterBasket = 0;
 
-
 const basketPopup = document.querySelector(".modal-basket");
 const basketClose = basketPopup.querySelector(".modal-close");
 const basketContinue = basketPopup.querySelector(".button-continue");
-
 
 
 for (let basketLink of basketLinks) {

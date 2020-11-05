@@ -756,7 +756,7 @@ svg {
     width: 22px;
     height: 40px;
     background-color: transparent;
-    background-image: url("../img/icons/shape.svg");
+    background-image: url("../img/icons/slider-shape.svg");
     background-size: 22px 40px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1291,7 +1291,7 @@ svg {
     right: 0;
     width: 468px;
     height: 261px;
-    background-image: url("../img/index/services-delivery.png");
+    background-image: url("../img/index/service-delivery.png");
     background-size: 468px 261px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1304,7 +1304,7 @@ svg {
     right: -8px;
     width: 389px;
     height: 283px;
-    background-image: url("../img/index/services-guarantee.png");
+    background-image: url("../img/index/service-guarantee.png");
     background-size: 389px 283px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1317,7 +1317,7 @@ svg {
     right: -10px;
     width: 465px;
     height: 285px;
-    background-image: url("../img/index/services-credit.png");
+    background-image: url("../img/index/service-credit.png");
     background-size: 465px 285px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -2153,6 +2153,10 @@ svg {
             animation: downride 1s;
 }
 
+.modal-error {
+    animation: error-shake 0.4s;
+}
+
 .modal-close {
     content: "";
     position: absolute;
@@ -2186,7 +2190,7 @@ svg {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.modal-contacts-form {
+.feedback-form-fields {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2370,3 +2374,25 @@ svg {
         transform: translateY(0);
     }
 }
+
+@keyframes error-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-7px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(7px);
+    }
+  }
